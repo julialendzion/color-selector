@@ -17,7 +17,7 @@ function showColor(event) {
 }
 
 function showHex(event) {
-  document.querySelector("#hex").textContent = `HEX: ${event.target.value}`;
+  document.querySelector("#hex").textContent = `HEX:  ${event.target.value}`;
 }
 
 function getRgb(event) {
@@ -38,7 +38,7 @@ function getRgb(event) {
 }
 
 function showRgb(red, green, blue) {
-  document.querySelector("#rgb").textContent = `RGB= ${red}, ${green}, ${blue}`;
+  document.querySelector("#rgb").textContent = `RGB:  ${red}, ${green}, ${blue}`;
 }
 
 function getHsl(r, g, b) {
@@ -81,5 +81,5 @@ function getHsl(r, g, b) {
 }
 
 function showHsl(h, s, l) {
-  document.querySelector("#hsl").textContent = `HSL= ${h}, ${s}, ${l}`;
+  document.querySelector("#hsl").textContent = `HSL:  ${h}, ${s}, ${l}`;
 }

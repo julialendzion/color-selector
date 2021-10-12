@@ -20,9 +20,12 @@ function colorChosen(event) {
   colorAndHarmonyGlobal.color = getHsl(rgb);
   generateHarmonies();
 
+  console.log(colorAndHarmonyGlobal.color);
+
   showHex(hex);
   showColor(hex);
   showRgb(rgb);
+  showHsl(colorAndHarmonyGlobal.color);
 }
 
 function showHex(data) {
@@ -34,6 +37,10 @@ function showColor(data) {
 }
 function showRgb(data) {
   document.querySelector("#rgb").textContent = `RGB:  ${data.r}, ${data.g}, ${data.b}`;
+}
+
+function showHsl(object) {
+  document.querySelector("#hsl").textContent = `HSL:  ${Math.floor(object.h)}, ${Math.floor(object.s)}, ${Math.floor(object.l)}`;
 }
 
 function harmonyChosen(event) {
@@ -105,10 +112,6 @@ function getHsl(rgb) {
   l *= 100;
 
   console.log(h, s, l); // just for testing
-  const hsl = {
-    h: h,
-    s: s,
-    l: l,
-  };
-  return hsl;
+
+  return { h, s, l };
 }
